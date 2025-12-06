@@ -1,24 +1,25 @@
 package com.algaworks.algafood.domain.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.math.BigDecimal;
 import java.util.Objects;
 import java.util.UUID;
 
 @Entity
+@Table
 public class Restaurante {
     @Id
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String nome;
     private BigDecimal taxaFrete;
 
-    public UUID getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -45,7 +46,6 @@ public class Restaurante {
         return Objects.equals(id, that.id);
     }
 
-    @Override
     public int hashCode() {
         return Objects.hashCode(id);
     }
