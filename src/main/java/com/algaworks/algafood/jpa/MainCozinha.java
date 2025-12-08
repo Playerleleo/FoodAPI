@@ -16,12 +16,23 @@ public class MainCozinha {
                 .run(args);
 
         CadastraCozinha cadastraCozinha = applicationContext.getBean(CadastraCozinha.class);
+        Cozinha cozinha1 = new Cozinha();
+        Cozinha cozinha2 = new Cozinha();
 
-        List<Cozinha> cozinhas = cadastraCozinha.listar();
+        cozinha1.setNome("Japonesa");
+        cozinha2.setNome("Indiana");
 
-        for (Cozinha cozinha : cozinhas) {
-            System.out.println(cozinha.getNome());
-        }
+        cadastraCozinha.cadastro(cozinha1);
+        cadastraCozinha.cadastro(cozinha2);
+
+
+//        CadastraCozinha cadastraCozinha = applicationContext.getBean(CadastraCozinha.class);
+//
+//        List<Cozinha> cozinhas = cadastraCozinha.listar();
+//
+//        for (Cozinha cozinha : cozinhas) {
+//            System.out.println(cozinha.getNome());
+//        }
 
     }
 }
