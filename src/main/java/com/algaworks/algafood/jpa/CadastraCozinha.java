@@ -27,4 +27,9 @@ public class CadastraCozinha {
     public Cozinha buscarID(Long id) {
         return manager.find(Cozinha.class, id);
     }
+
+    public void remover(Cozinha cozinha) {
+        cozinha = buscarID(cozinha.getId());
+        manager.remove(cozinha);
+    }
 }
