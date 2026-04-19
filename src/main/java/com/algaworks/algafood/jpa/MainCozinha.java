@@ -16,15 +16,15 @@ public class MainCozinha {
                 .web(WebApplicationType.NONE)
                 .run(args);
 
-        CozinhaRepository cadastraCozinha = applicationContext.getBean(CozinhaRepository.class);
-        Cozinha cozinha1 = new Cozinha();
-        Cozinha cozinha2 = new Cozinha();
-
-        cozinha1.setNome("Japonesa");
-        cozinha2.setNome("Indiana");
-
-        cadastraCozinha.salvar(cozinha1);
-        cadastraCozinha.salvar(cozinha2);
+//        CozinhaRepository cadastraCozinha = applicationContext.getBean(CozinhaRepository.class);
+//        Cozinha cozinha1 = new Cozinha();
+//        Cozinha cozinha2 = new Cozinha();
+//
+//        cozinha1.setNome("Japonesa");
+//        cozinha2.setNome("Indiana");
+//
+//        cadastraCozinha.salvar(cozinha1);
+//        cadastraCozinha.salvar(cozinha2);
 
 
 //        CadastraCozinha cadastraCozinha = applicationContext.getBean(CadastraCozinha.class);

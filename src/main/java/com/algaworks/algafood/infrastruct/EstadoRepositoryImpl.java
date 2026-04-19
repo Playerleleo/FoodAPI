@@ -5,10 +5,12 @@ import com.algaworks.algafood.domain.model.FormaPagamento;
 import com.algaworks.algafood.domain.repository.EstadoRepository;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+@Repository
 public class EstadoRepositoryImpl implements EstadoRepository {
     @PersistenceContext
     private EntityManager manager;

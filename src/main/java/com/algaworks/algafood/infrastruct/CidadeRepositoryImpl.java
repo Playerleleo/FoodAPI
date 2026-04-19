@@ -5,10 +5,12 @@ import com.algaworks.algafood.domain.model.Estado;
 import com.algaworks.algafood.domain.repository.CidadeRepository;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+@Repository
 public class CidadeRepositoryImpl implements CidadeRepository {
     @PersistenceContext
     private EntityManager manager;
