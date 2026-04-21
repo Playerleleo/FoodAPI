@@ -21,7 +21,7 @@ public class EstadoRepositoryImpl implements EstadoRepository {
     }
 
     @Override
-    public Estado BuscarID(Long id) {
+    public Estado buscarID(Long id) {
         return manager.find(Estado.class, id);
     }
 
@@ -33,8 +33,8 @@ public class EstadoRepositoryImpl implements EstadoRepository {
 
     @Transactional
     @Override
-    public void remover(Estado estado) {
-        estado = BuscarID(estado.getId());
+    public void remover(Long id) {
+        Estado estado = buscarID(id);
         manager.remove(estado);
     }
 }

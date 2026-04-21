@@ -16,7 +16,7 @@ public class CozinhaRepositoryImpl implements CozinhaRepository {
 
     @Override
     public List<Cozinha> listar() {
-        return manager.createQuery("from cozinha", Cozinha.class).getResultList();
+        return manager.createQuery("from Cozinha", Cozinha.class).getResultList();
     }
 
     @Override
@@ -33,8 +33,8 @@ public class CozinhaRepositoryImpl implements CozinhaRepository {
 
     @Transactional
     @Override
-    public void remover(Cozinha cozinha) {
-        cozinha = buscarID(cozinha.getId());
+    public void remover(Long id) {
+        Cozinha cozinha = buscarID(id);
         manager.remove(cozinha);
     }
 }

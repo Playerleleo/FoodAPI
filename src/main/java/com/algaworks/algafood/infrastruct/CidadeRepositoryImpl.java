@@ -33,8 +33,8 @@ public class CidadeRepositoryImpl implements CidadeRepository {
 
     @Transactional
     @Override
-    public void remover(Cidade cidade) {
-        cidade = BuscarID(cidade.getId());
+    public void remover(Long id) {
+        Cidade cidade = BuscarID(id);
         manager.remove(cidade);
     }
 }

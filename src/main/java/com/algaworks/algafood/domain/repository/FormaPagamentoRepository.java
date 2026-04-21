@@ -8,7 +8,7 @@ public interface FormaPagamentoRepository {
     List<FormaPagamento> listar();
     FormaPagamento BuscarID(Long id);
     FormaPagamento salvar(FormaPagamento formaPagamento);
-    void remover(FormaPagamento formaPagamento);
+    void remover(Long id);
 
 
 }
